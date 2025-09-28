@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+@theme {
+  --text-small: 9px;
+  --text-medium: 12px;
+  --text-large: 18px;
+}
+
+.bg-dark-background {
+  background-image: url("/bg-main-mobile.png");
+}
