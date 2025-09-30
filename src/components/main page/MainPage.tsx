@@ -5,9 +5,7 @@ import InputBox from "../input-box/InputBox";
 import ThankYou from "../thank-you/ThankYou";
 
 const MainPage: React.FC = () => {
-  const [showThankYou, setShowThankYou] = useState<boolean>(false);
-
-  setShowThankYou(false);
+  // const [showThankYou, setShowThankYou] = useState<boolean>(false);
   return (
     <>
       <div className="w-full h-screen ">
@@ -17,7 +15,9 @@ const MainPage: React.FC = () => {
             <CardFront />
           </div>
         </div>
-        {showThankYou ? <ThankYou /> : <InputBox />}
+        {/* {showThankYou ? <ThankYou /> : <InputBox />} */}
+        <InputBox />
+        <ThankYou />
       </div>
     </>
   );
