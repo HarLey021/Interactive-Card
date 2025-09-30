@@ -7,9 +7,23 @@ body {
 @theme {
   --text-small: 9px;
   --text-medium: 12px;
+  --text-fourteen: 14px;
   --text-large: 18px;
+  --text-extra-large: 28px;
+
+  --color-deep-violet: #21092f;
+  --color-Light-Grey: #dfdee0;
+  --color-Dark-Grey: #8f8694;
 }
 
 .bg-dark-background {
   background-image: url("/bg-main-mobile.png");
+}
+
+.bg-card-front {
+  background-image: url("/bg-card-front.png");
+}
+
+.bg-card-back {
+  background-image: url("/bg-card-back.png");
 }

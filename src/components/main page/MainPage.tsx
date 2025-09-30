@@ -1,19 +1,21 @@
+import { useState } from "react";
+import CardBack from "../card-back/CardBack";
+import CardFront from "../card-front/CardFront";
+import InputBox from "../input-box/InputBox";
+import ThankYou from "../thank-you/ThankYou";
+
 const MainPage: React.FC = () => {
+  const [showThankYou, setShowThankYou] = useState<boolean>(false);
   return (
     <>
       <div className="w-full h-screen ">
-        <div className="w-full h-[240px] bg-dark-background pt-[32px] pl-[17px] pr-[17px] ">
+        <div className="w-full h-[240px] bg-dark-background bg-cover pt-[32px] pl-[17px] pr-[17px] ">
           <div className="w-[342px] justify-self-center">
-            <img
-              src="/bg-card-back.png"
-              className="w-[286px] h-[157px] justify-self-end "
-            />
-            <img
-              src="/bg-card-front.png"
-              className="w-[286px] h-[157px] justify-self-start absolute top-[120px]"
-            />
+            <CardBack />
+            <CardFront />
           </div>
         </div>
+        {showThankYou ? <ThankYou /> : <InputBox />}
       </div>
     </>
   );
