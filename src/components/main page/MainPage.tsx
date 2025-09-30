@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CardBack from "../card-back/CardBack";
 import CardFront from "../card-front/CardFront";
 import InputBox from "../input-box/InputBox";
