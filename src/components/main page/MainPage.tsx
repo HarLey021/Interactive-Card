@@ -6,6 +6,8 @@ import ThankYou from "../thank-you/ThankYou";
 
 const MainPage: React.FC = () => {
   const [showThankYou, setShowThankYou] = useState<boolean>(false);
+
+  setShowThankYou(false);
   return (
     <>
       <div className="w-full h-screen ">
