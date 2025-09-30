@@ -14,16 +14,12 @@ body {
   --color-deep-violet: #21092f;
   --color-Light-Grey: #dfdee0;
   --color-Dark-Grey: #8f8694;
-}
 
-.bg-dark-background {
-  background-image: url("/bg-main-mobile.png");
-}
+  --background-image-dark-background: url("/bg-main-mobile.png");
+  --background-image-card-front: url("/bg-card-front.png");
+  --background-image-card-back: url("/bg-card-back.png");
 
-.bg-card-front {
-  background-image: url("/bg-card-front.png");
-}
+  --background-image-desktop-dark-background: url("/bg-main-desktop.png");
 
-.bg-card-back {
-  background-image: url("/bg-card-back.png");
+  --breakpoint-desktop: 1440px;
 }
