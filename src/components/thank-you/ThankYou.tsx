@@ -1,4 +1,17 @@
-const ThankYou: React.FC = () => {
+const ThankYou: React.FC<ThankYouInterface> = ({
+  setShowThankYou,
+  setSubmittedInfo,
+}) => {
+  const handleContinue = (e: React.MouseEvent<HTMLButtonElement>) => {
+    setShowThankYou(false);
+    setSubmittedInfo({
+      name: "Jane Appleseed",
+      cardNumber: "0000 0000 0000 0000",
+      month: "00",
+      year: "00",
+      cvc: "000",
+    });
+  };
   return (
     <>
       <div className="w-full h-[464px] pt-[91px] pl-[24px] pr-[24px] flex flex-col items-center desktop:p-0 desktop:w-[380px] desktop:h-[301px]">
@@ -9,7 +22,10 @@ const ThankYou: React.FC = () => {
         <p className="text-large text-Dark-Grey mb-[48px]">
           We’ve added your card details
         </p>
-        <button className="w-full h-[53px] rounded-[8px] bg-deep-violet text-white text-large">
+        <button
+          onClick={handleContinue}
+          className="w-full h-[53px] rounded-[8px] bg-deep-violet text-white text-large"
+        >
           Continue
         </button>
       </div>
