@@ -59,7 +59,7 @@ const InputBox: React.FC<InputBoxProps> = ({
           />
 
           <div className="w-full h-[72px] mb-[28px] flex justify-between desktop:mb-[40px]">
-            <div className="w-[152px] desktop:w-[170px] ">
+            <div className="w-[152px] mr-[8px] desktop:w-[170px] ">
               <h1 className="text-medium text-deep-violet uppercase tracking-[2px] mb-[9px]">
                 Exp. Date (MM/YY)
               </h1>
