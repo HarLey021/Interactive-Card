@@ -2,7 +2,7 @@ const ThankYou: React.FC<ThankYouInterface> = ({
   setShowThankYou,
   setSubmittedInfo,
 }) => {
-  const handleContinue = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleContinue = () => {
     setShowThankYou(false);
     setSubmittedInfo({
       name: "Jane Appleseed",

@@ -1,4 +1,4 @@
-const CardFront: React.FC<cardProps> = ({ submittedInfo }) => {
+const CardFront: React.FC<CardProps> = ({ submittedInfo }) => {
   return (
     <>
       <div className="w-[286px] h-[157px] absolute top-[120px] bg-card-front bg-no-repeat bg-cover pt-[18px] pl-[19px] pr-[21px] rounded-[6px] desktop:w-[447px] desktop:h-[245px] desktop:absolute desktop:top-0 desktop:pt-[28px] desktop:pl-[32px] desktop:pr-[28px]">
