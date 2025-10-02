@@ -59,30 +59,31 @@ const InputBox: React.FC<InputBoxProps> = ({
           />
 
           <div className="w-full h-[72px] mb-[28px] flex justify-between desktop:mb-[40px]">
-            <div className="w-[152px] desktop:w-[170px]">
+            <div className="w-[152px] desktop:w-[170px] ">
               <h1 className="text-medium text-deep-violet uppercase tracking-[2px] mb-[9px]">
                 Exp. Date (MM/YY)
               </h1>
+              <div className="flex flex-nowrap">
+                <input
+                  name="month"
+                  onChange={handleChange}
+                  value={info.month}
+                  type="text"
+                  maxLength={2}
+                  placeholder="MM"
+                  className="w-[72px] h-[45px] border border-Light-Grey text-deep-violet rounded-[8px] py-[11px] px-[11px] text-center mr-[8px] text-large desktop:w-[80px]"
+                />
 
-              <input
-                name="month"
-                onChange={handleChange}
-                value={info.month}
-                type="text"
-                maxLength={2}
-                placeholder="MM"
-                className="w-[72px] h-[45px] border border-Light-Grey text-deep-violet rounded-[8px] py-[11px] px-[11px] text-center mr-[8px] text-large desktop:w-[80px]"
-              />
-
-              <input
-                name="year"
-                onChange={handleChange}
-                value={info.year}
-                type="text"
-                maxLength={2}
-                placeholder="YY"
-                className="w-[72px] h-[45px] border border-Light-Grey text-deep-violet rounded-[8px] py-[11px] px-[11px] text-center text-large desktop:w-[80px]"
-              />
+                <input
+                  name="year"
+                  onChange={handleChange}
+                  value={info.year}
+                  type="text"
+                  maxLength={2}
+                  placeholder="YY"
+                  className="w-[72px] h-[45px] border border-Light-Grey text-deep-violet rounded-[8px] py-[11px] px-[11px] text-center text-large desktop:w-[80px]"
+                />
+              </div>
             </div>
 
             <div className="w-[164px] desktop:w-[190px]">
