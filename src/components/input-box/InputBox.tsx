@@ -130,12 +130,12 @@ const InputBox: React.FC<InputBoxProps> = ({
           </div>
 
           <div className="w-full h-[92px] mb-[28px] flex justify-between desktop:mb-[40px]">
-            <div className="w-[152px] mr-[8px] desktop:w-[170px] ">
+            <div className="w-[152px] mr-[8px] desktop:w-[176px] ">
               <h1 className="text-medium text-deep-violet uppercase tracking-[2px] mb-[9px]">
                 Exp. Date (MM/YY)
               </h1>
               <div className="flex flex-nowrap ">
-                <div>
+                <div className="w-[80px] mr-[8px]">
                   <input
                     name="month"
                     onChange={handleChange}
@@ -143,20 +143,22 @@ const InputBox: React.FC<InputBoxProps> = ({
                     type="text"
                     maxLength={2}
                     placeholder="MM"
-                    className={`w-[72px] h-[45px] border border-Light-Grey text-deep-violet rounded-[8px] py-[11px] px-[11px] text-center mr-[8px] text-large desktop:w-[80px] ${
+                    className={`w-[72px] h-[45px] border border-Light-Grey text-deep-violet rounded-[8px] py-[11px] px-[11px] text-center text-large desktop:w-[80px] ${
                       errors.month
                         ? "border-error-red mb-[8px]"
                         : "border-Light-Grey mb-0"
                     }`}
                   />
                   {errors.month ? (
-                    <p className="text-medium text-error-red">{errors.month}</p>
+                    <p className="text-medium text-error-red w-full">
+                      {errors.month}
+                    </p>
                   ) : (
                     ""
                   )}
                 </div>
 
-                <div>
+                <div className="w-[80px]">
                   <input
                     name="year"
                     onChange={handleChange}
@@ -171,7 +173,9 @@ const InputBox: React.FC<InputBoxProps> = ({
                     }`}
                   />
                   {errors.year ? (
-                    <p className="text-medium text-error-red">{errors.year}</p>
+                    <p className="text-medium text-error-red w-full">
+                      {errors.year}
+                    </p>
                   ) : (
                     ""
                   )}
