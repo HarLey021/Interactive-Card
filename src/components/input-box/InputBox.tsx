@@ -82,7 +82,7 @@ const InputBox: React.FC<InputBoxProps> = ({
     <>
       <div className="w-full h-[464px] pt-[91px] pl-[17px] pr-[17px] desktop:w-[380px] desktop:h-[352px] desktop:p-0">
         <form onSubmit={handleSubmit} className="pl-[7px] pr-[7px] desktop:p-0">
-          <div className="mb-[20px]">
+          <div className="mb-[20px] desktop:mb-[26px]">
             <h1 className="text-medium text-deep-violet uppercase tracking-[2px] mb-[9px]">
               Cardholder Name
             </h1>
@@ -92,7 +92,7 @@ const InputBox: React.FC<InputBoxProps> = ({
               value={info.name}
               type="text"
               placeholder="e.g. Jane Appleseed"
-              className={`w-full h-[45px] border  text-deep-violet rounded-[8px] py-[11px] px-[11px] text-large desktop:mb-[26px] ${
+              className={`w-full h-[45px] border  text-deep-violet rounded-[8px] py-[11px] px-[11px] text-large  ${
                 errors.name
                   ? "border-error-red mb-[8px]"
                   : "border-Light-Grey mb-0"
@@ -105,7 +105,7 @@ const InputBox: React.FC<InputBoxProps> = ({
             )}
           </div>
 
-          <div className="mb-[20px]">
+          <div className="mb-[20px] desktop:mb-[26px]">
             <h1 className="text-medium text-deep-violet uppercase tracking-[2px] mb-[9px]">
               Card Number
             </h1>
@@ -116,7 +116,7 @@ const InputBox: React.FC<InputBoxProps> = ({
               type="text"
               maxLength={19}
               placeholder="e.g. 1234 5678 9123 0000"
-              className={`w-full h-[45px] border border-Light-Grey text-deep-violet rounded-[8px] py-[11px] px-[11px] text-large desktop:mb-[26px] ${
+              className={`w-full h-[45px] border border-Light-Grey text-deep-violet rounded-[8px] py-[11px] px-[11px] text-large  ${
                 errors.cardNumber
                   ? "border-error-red mb-[8px]"
                   : "border-Light-Grey mb-0"
@@ -129,7 +129,13 @@ const InputBox: React.FC<InputBoxProps> = ({
             )}
           </div>
 
-          <div className="w-full h-[92px] mb-[28px] flex justify-between desktop:mb-[40px]">
+          <div
+            className={`w-full h-[72px] mb-[28px] flex justify-between desktop:mb-[40px] ${
+              errors.month || errors.year || errors.cvc
+                ? "mb-[64px] desktop:mb-[64px]"
+                : ""
+            }`}
+          >
             <div className="w-[152px] mr-[8px] desktop:w-[176px] ">
               <h1 className="text-medium text-deep-violet uppercase tracking-[2px] mb-[9px]">
                 Exp. Date (MM/YY)
