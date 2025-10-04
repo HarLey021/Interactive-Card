@@ -14,6 +14,7 @@ body {
   --color-deep-violet: #21092f;
   --color-Light-Grey: #dfdee0;
   --color-Dark-Grey: #8f8694;
+  --color-error-red: #ff5050;
 
   --background-image-dark-background: url("/bg-main-mobile.png");
   --background-image-card-front: url("/bg-card-front.png");

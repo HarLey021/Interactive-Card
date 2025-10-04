@@ -5,15 +5,15 @@ import { useState } from "react";
 import ThankYou from "../thank-you/ThankYou";
 
 const MainPage: React.FC = () => {
-  const [showThankYou, setShowThankYou] = useState<boolean>(false);
-  const [info, setInfo] = useState<InfoInterface>({
+  const baseInfo = {
     name: "",
     cardNumber: "",
     month: "",
     year: "",
     cvc: "",
-  });
-
+  };
+  const [showThankYou, setShowThankYou] = useState<boolean>(false);
+  const [info, setInfo] = useState<InfoInterface>(baseInfo);
   const [submittedInfo, setSubmittedInfo] = useState<InfoInterface>();
   return (
     <>
@@ -34,6 +34,7 @@ const MainPage: React.FC = () => {
           />
         ) : (
           <InputBox
+            baseInfo={baseInfo}
             info={info}
             setInfo={setInfo}
             setSubmittedInfo={setSubmittedInfo}

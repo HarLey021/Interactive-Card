@@ -7,6 +7,7 @@ interface InfoInterface {
 }
 
 interface InputBoxProps {
+  baseInfo: InfoInterface;
   info: InfoInterface;
   setInfo: React.Dispatch<React.SetStateAction<InfoInterface>>;
   setSubmittedInfo: React.Dispatch<
