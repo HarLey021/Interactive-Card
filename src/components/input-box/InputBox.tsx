@@ -26,12 +26,16 @@ const InputBox: React.FC<InputBoxProps> = ({
       newErrors.month = "Can't be blank";
     } else if (info.month.length < 2) {
       newErrors.month = "Must be 2 digits";
+    } else if (Number(info.month) > 12) {
+      newErrors.month = "Enter between 1 and 12";
     }
 
     if (!info.year) {
       newErrors.year = "Can't be blank";
     } else if (info.year.length < 2) {
       newErrors.year = "Must be 2 digits";
+    } else if (Number(info.year) > 12) {
+      newErrors.year = "Enter between 1 and 12";
     }
 
     if (!info.cvc) {
